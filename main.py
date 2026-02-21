@@ -120,7 +120,7 @@ def parse_pr_url(pr_url: str) -> tuple[str, str, str]:
     if not match:
         raise HTTPException(
             status_code=400,
-            detail="Invalid GitHub PR URL. Expected format: https://github.com/{owner}/{repo}/pull/{number}"
+            detail="Invalid GitHub PR URL Sent. Expected format: https://github.com/{owner}/{repo}/pull/{number}"
         )
     return match.group(1), match.group(2), match.group(3)
 
